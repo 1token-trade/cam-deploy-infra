@@ -5,3 +5,6 @@ sudo apt install docker.io pass gnupg2 docker-compose tmux -y
 sudo usermod -aG docker $USER 
 # change default shell to bash 
 sudo chsh -s $(which bash) $USER 
+
+# change docker log size
+echo '{"log-opts":{"max-size":"500m","max-file":"5","compress":"true"}}' |sudo tee  /etc/docker/daemon.json
