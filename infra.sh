@@ -9,4 +9,4 @@ sudo chsh -s $(which bash) $USER
 # change docker log size
 echo '{"log-opts":{"max-size":"500m","max-file":"5","compress":"true"}}' |sudo tee  /etc/docker/daemon.json
 echo 'mark docker service not auto-upgrade'
-sudo apt-mark hold docker
+sudo apt-mark hold docker docker.io
